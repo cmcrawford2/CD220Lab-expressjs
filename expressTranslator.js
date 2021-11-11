@@ -26,7 +26,7 @@ function translate(textToTranslate,res) {
 
     const translateParams = {
         text: textToTranslate,
-        modelId: 'en-es',
+        modelId: 'en-tr',
       };
     
     languageTranslator.translate(translateParams)
@@ -62,6 +62,7 @@ app.get("/translators", (req,res) => {
   getLanguages(res);
 });
 
-app.listen(3333, () => {
-    console.log(`Listening at http://localhost:3333`)
+const port = 3334;
+app.listen(port, () => {
+    console.log(`Listening at http://localhost:${port}`)
 })
